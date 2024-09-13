@@ -74,7 +74,7 @@ class secondpage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Ambulance arrival info
+                
                 Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
@@ -117,7 +117,7 @@ class secondpage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 16),
-                      // Progress bar
+                      
                       Row(
                         children: [
                           Expanded(
@@ -135,7 +135,7 @@ class secondpage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Doctor video call
+                
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -169,7 +169,8 @@ class secondpage extends StatelessWidget {
                       ),
                       // Video call area
                       Container(
-                        height: 200,
+                        height: 300,
+                        width:356,
                         decoration: BoxDecoration(
                           color: Colors.grey.shade200,
                           borderRadius: BorderRadius.only(
@@ -178,10 +179,10 @@ class secondpage extends StatelessWidget {
                           ),
                         ),
                         child: Center(
-                          child: Icon(Icons.video_call, size: 50, color: Colors.grey),
+                          child: Image.asset('images/image4.jpeg'),
                         ),
                       ),
-                      // Call actions
+                      
                       Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         child: Row(
@@ -208,7 +209,7 @@ class secondpage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                // Bottom buttons
+                
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
