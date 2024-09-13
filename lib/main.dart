@@ -38,7 +38,7 @@ class _HomeScreenState extends State<EmergencyHelpScreen> {
   int _selectedIndex=0;
   void _onItemTapped(int index) {
     setState(() {
-      _selectedIndex = index; // Update the selected index
+      _selectedIndex = index; 
     });
   }
 @override
@@ -92,15 +92,15 @@ class _HomeScreenState extends State<EmergencyHelpScreen> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              // Stack to position the heart and SOS button
+              
               Stack(
-                clipBehavior: Clip.none, // Allows the heart to be outside the container
+                clipBehavior: Clip.none,
                 children: [
-                  // SOS Panel
+                  
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: Colors.white, // Set the background to white
+                      color: Colors.white, 
                       borderRadius: BorderRadius.circular(15),
                       border: Border.all(
                         color: Color(0xFF664DEF),
@@ -111,39 +111,39 @@ class _HomeScreenState extends State<EmergencyHelpScreen> {
                           color: Colors.grey.withOpacity(0.5),
                           spreadRadius: 2,
                           blurRadius: 5,
-                          offset: const Offset(0, 3), // Shadow position
+                          offset: const Offset(0, 3), 
                         ),
                       ],
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 60.0), // Adjusted bottom padding
+                      padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 60.0),
                       child: Column(
                         children: [
                           Text(
                             "Emergency help needed?",
                             style: TextStyle(
                               fontSize: 18,
-                              color: Colors.black, // Change text color to black
+                              color: Colors.black, 
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          SizedBox(height: 4), // Reduced space between main text and subscript
+                          SizedBox(height: 4), 
                           Text(
                             "Just hold the button to call",
                             style: TextStyle(
                               fontSize: 14,
-                              color: Colors.black54, // Subscript text color
+                              color: Colors.black54, 
                             ),
                           ),
-                          SizedBox(height: 30), // Space to position SOS button
+                          SizedBox(height: 30),
                         ],
                       ),
                     ),
                   ),
                   // Heart Shaped Button Positioned Partially Outside the Panel
                   Positioned(
-                    bottom: -40, // Positioning the heart outside the panel
-                    left: MediaQuery.of(context).size.width / 2 - 70, // Centering the heart
+                    bottom: -40,
+                    left: MediaQuery.of(context).size.width / 2 - 70, 
                     child:
 
                      ClipPath(
@@ -324,59 +324,58 @@ class _HomeScreenState extends State<EmergencyHelpScreen> {
                         children: [
                           // Doctor's Image with Purple Border
                           Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.purple, width: 2), // Purple border
-                              borderRadius: BorderRadius.circular(10), // Rounded corners for the border
-                            ),
+                            // decoration: BoxDecoration(
+                            //   border: Border.all(color: Colors.purple, width: 2), // Purple border
+                            //   borderRadius: BorderRadius.circular(10), // Rounded corners for the border
+                            // ),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10), // Rounded corners for the image
-                              child: Image.network(
-                                'https://via.placeholder.com/150', // Replace with doctor's image URL
+                              child: Image.asset('images/image3.jpeg'), // Replace with doctor's image URL
                                 width: 100, // Increased width of the image
                                 height: 100, // Increased height of the image
                                 fit: BoxFit.cover, // Cover the area
                               ),
                             ),
                           ),
-                          SizedBox(width: 16), // Space between image and text
+                          SizedBox(width: 16), 
                           // Doctor's Name and Consultation Type
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Dr. Ashutosh Misra", // Doctor's name
+                                  "Dr. Ashutosh Misra",e
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                SizedBox(height: 4), // Space between name and consultation type
+                                SizedBox(height: 4), 
                                 // Consultation Type and Time in the same box
                                 Container(
-                                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), // Padding for rounded rectangle
+                                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), 
                                   decoration: BoxDecoration(
-                                    color: Colors.purple.withOpacity(0.25), // Consultation rectangle color (25% purple)
-                                    borderRadius: BorderRadius.circular(20), // Rounded rectangle
+                                    color: Colors.purple.withOpacity(0.25), 
+                                    borderRadius: BorderRadius.circular(20), 
                                   ),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        "General Consultation", // Type of consultation
+                                        "General Consultation", 
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.normal,
-                                          color: Colors.white, // Text color for better contrast
+                                          color: Colors.white, 
                                         ),
                                       ),
-                                      SizedBox(height: 4), // Space between consultation type and time
+                                      SizedBox(height: 4), 
                                       Text(
-                                        "10:30 AM", // Appointment time
+                                        "10:30 AM", 
                                         style: TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold,
-                                          color: Colors.white, // Text color for better contrast
+                                          color: Colors.white, 
                                         ),
                                       ),
                                     ],
@@ -387,19 +386,19 @@ class _HomeScreenState extends State<EmergencyHelpScreen> {
                           ),
                           // Token Number Rectangle
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10), // Padding for token number rectangle
+                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                             decoration: BoxDecoration(
                               color: Colors.purple.withOpacity(0.5), // Token number rectangle color (50% purple)
                               borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20), // Rounded top left corner
-                                bottomLeft: Radius.circular(20), // Rounded bottom left corner
+                                topLeft: Radius.circular(20), 
+                                bottomLeft: Radius.circular(20), 
                               ), // Rounded rectangle
                             ),
                             child: Text(
-                              "Token No. 5", // Token number
+                              "Token No. 5", 
                               style: TextStyle(
                                 fontSize: 14,
-                                color: Colors.white, // Text color for better contrast
+                                color: Colors.white, 
                               ),
                             ),
                           ),
@@ -461,7 +460,7 @@ class _HomeScreenState extends State<EmergencyHelpScreen> {
 
         child: BottomNavigationBar(
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.cyan,   // Color of the selected (active) icon
+          selectedItemColor: Colors.cyan,   
           unselectedItemColor: Colors.grey,
           onTap: _onItemTapped,
           items: const [
